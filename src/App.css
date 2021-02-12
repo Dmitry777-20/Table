@@ -56,6 +56,10 @@ td {
 }
 
 
+.fullInfo {
+    margin: 15px 0;
+}
+
 .lds-dual-ring {
     display: inline-block;
     width: 80px;

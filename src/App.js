@@ -82,7 +82,6 @@ function App(props) {
     let Elements = arr.map(p => <Element name={p} func={func} key={p.id}/>);
 
 
-
     // state для постраничного вывода
 
 
@@ -131,7 +130,7 @@ function App(props) {
     let renderSort = (field) => {
         props.renderSort(field)
     }
-
+console.log(fullInfo.address)
     return (
         <div>
             <div className="table">
@@ -159,7 +158,10 @@ function App(props) {
             <div className="pageNumbers">
                 <PageNumbers pages={pages} renderPage={renderPage} currentPage={currentPage}/>
             </div>
-            <div>Выбран пользователь <b>{fullInfo.firstName} {fullInfo.lastName} {fullInfo.id}</b></div>
+            <div className="fullInfo">
+                Выбран пользователь: <b>{fullInfo.firstName} {fullInfo.lastName} {fullInfo.id}</b><br/>
+                {fullInfo.description}
+            </div>
             {loading && <Loader/>}
         </div>
     )
